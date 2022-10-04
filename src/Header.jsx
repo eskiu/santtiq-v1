@@ -20,11 +20,11 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div id="wrapper">
-                <a id="wrapper-inner" href="#projects">
-                    <div id="scroll-down">
+            <div className='wrapper'>
+                <a href="#projects" className='wrapper-inner'>
+                    <div className='scroll-down'>
                         <span className="arrow-down"></span>
-                        <span id="scroll-title">
+                        <span className='scroll-title'>
                             Projects
                         </span>
                     </div>

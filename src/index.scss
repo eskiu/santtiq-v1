@@ -262,7 +262,7 @@ body {
       }
     }
 
-    #wrapper {
+    .wrapper {
       position: absolute;
       bottom: 0px;
       right: 0px;
@@ -270,14 +270,14 @@ body {
       display: flex;
       justify-content: center;
       margin-bottom: 2rem;
-      #wrapper-inner {
+      .wrapper-inner {
         display: table-cell;
         vertical-align:middle;
         height: auto;
         text-decoration: none;
       }
       
-      #scroll-down {
+      .scroll-down {
         display: block;
         position: relative;
         padding-top: 55px;
@@ -306,7 +306,7 @@ body {
           -ms-transform: rotate(135deg);
           transform: rotate(135deg);
       }
-      #scroll-title {
+      .scroll-title {
         display: block;
         text-transform: uppercase;
         color: var(--violet);
@@ -315,7 +315,7 @@ body {
         font-weight:bold;
         letter-spacing:.1em;
       }
-      #scroll-down::before {
+      .scroll-down::before {
           -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
           /* Safari 4+ */
           
@@ -1282,17 +1282,17 @@ body {
           padding: 0 1rem;
         }
       }
-      #wrapper{
+      .wrapper{
         bottom: 0;
         right: 0;
         width: 100%;
         display: flex;
         padding-bottom: 2rem;
-        #wrapper-inner{
-          #scroll-down{
+        .wrapper-inner{
+          .scroll-down{
             padding-top: 0;
           }
-          #scroll-down::before{
+          .scroll-down::before{
           top: -39px;
           height: 46px;
           }
@@ -1316,12 +1316,24 @@ body {
               width: 60%;
               align-items: center;
               margin: 0;
+              h3{
+                padding-top: 1rem;
+              }
+              .tech-icons{
+                padding: 1rem;
+              }
+              a{
+                padding: 1rem;
+              }
             }
             .imgs{
               display: flex;
               flex-direction: column;
               width: 60%;
               flex-wrap: nowrap;
+              a{
+                padding-bottom: 1rem;
+              }
             }
           }
           .project-small{
@@ -1399,12 +1411,12 @@ body {
           }
         }
       }
-      #wrapper{
-        #wrapper-inner{
-          #scroll-down{
+      .wrapper{
+        .wrapper-inner{
+          .scroll-down{
             padding-top: 0;
           }
-          #scroll-down::before{
+          .scroll-down::before{
           top: -39px;
           height: 46px;
           }
@@ -1449,12 +1461,12 @@ body {
           }
         }
       }
-      #wrapper{
-        #wrapper-inner{
-          #scroll-down{
+      .wrapper{
+        .wrapper-inner{
+          .scroll-down{
             padding-top: 0;
           }
-          #scroll-down::before{
+          .scroll-down::before{
           top: -39px;
           height: 46px;
           }
@@ -1466,6 +1478,30 @@ body {
         .buttons-header{
           .btn-contact-text{
             padding: 1rem 2rem;
+          }
+        }
+      }
+    }
+    .projects__main__container{
+      .projects__main{
+        .project-container{
+          .project, .project-small{
+            .text{
+              h3{
+                padding-top: 1rem;
+              }
+              .tech-icons{
+                padding: 1rem;
+              }
+              a{
+                padding: 1rem;
+              }
+            }
+            .imgs{
+              a{
+                padding-bottom: 1rem;
+              }
+            }
           }
         }
       }
@@ -1496,12 +1532,12 @@ body {
           }
         }
       }
-      #wrapper{
-        #wrapper-inner{
-          #scroll-down{
+      .wrapper{
+        .wrapper-inner{
+          .scroll-down{
             padding-top: 0;
           }
-          #scroll-down::before{
+          .scroll-down::before{
           top: -39px;
           height: 46px;
           }
@@ -1613,6 +1649,44 @@ body {
       }
     }
   }
+  @media screen and (max-width: 450px){
+    .header__main__container{
+      .wrapper{
+        display: none;
+      }
+    }
+    .projects__main__container{
+      .projects__main{
+        .project-container{
+          .project, .project-small{
+            .text{
+              text-align: center;
+              h3{
+                padding-top: 1rem;
+              }
+              .tech-icons{
+                padding: 1rem;
+              }
+              a{
+                padding: 1rem;
+              }
+            }
+            .imgs{
+              a{
+                padding-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact__main__container{
+      .other-contact{
+        margin-top: 0;
+        padding-top: 2.5rem;
+      }
+    }
+  }
   @media screen and (max-width: 400px){
     .header__main__container{
       .header__container{
@@ -1650,6 +1724,27 @@ body {
         .projects__main__title{
           font-size: 3.5em;
         }
+        .project-container{
+          .project, .project-small{
+            .text{
+              text-align: center;
+              h3{
+                padding-top: 1rem;
+              }
+              .tech-icons{
+                padding: 1rem;
+              }
+              a{
+                padding: 1rem;
+              }
+            }
+            .imgs{
+              a{
+                padding-bottom: 1rem;
+              }
+            }
+          }
+        }
       }
     }
     .about__main__container{
@@ -1677,12 +1772,140 @@ body {
           font-size: 3.5em;
         }
       }
+      .other-contact{
+        margin-top: 0;
+        padding-top: 4rem;
+      }
     }
   }
   @media screen and (max-width: 375px){
+    .projects__main__container{
+      .projects__main{
+        .project-container{
+          .project, .project-small{
+            .text{
+              text-align: center;
+              h3{
+                padding-top: 1rem;
+              }
+              .tech-icons{
+                padding: 1rem;
+              }
+              a{
+                padding: 1rem;
+              }
+            }
+            .imgs{
+              a{
+                padding-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 320px){
     .header__main__container{
-      #wrapper{
-        display: none;
+      padding: 0;
+      padding-top: 4.5rem;
+      height: 85vh;
+    }
+    .projects__main__container{
+      padding-top: 10rem;
+      .projects__main{
+        .project-container{
+          .project, .project-small{
+            .text{
+              h3{
+                font-size: 1.9em;
+                padding-top: 1rem;
+              }
+              .tech-icons{
+                padding: 1rem;
+              }
+              a{
+                padding: 1rem;
+              }
+            }
+            .imgs{
+              a{
+                padding-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact__main__container{
+      .other-contact{
+        margin-top: 0;
+        padding-top: 2rem;
+      }
+    }
+  }
+  @media (width: 414px){
+    .navbar-main-container{
+      height: 100vh;
+      .navbar-body{
+        .navbar-social{
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  @media (width: 375px){
+    .navbar-main-container{
+      .navbar-logo{
+        padding-bottom: 1rem;
+      }
+      .navbar-body{
+        .navbar-links{
+          a{
+            padding: 1.5rem 0;
+          }
+        }
+        .navbar-social{
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  @media (width: 360px){
+    .navbar-main-container{
+      .navbar-logo{
+        padding-bottom: 1rem;
+      }
+      .navbar-body{
+        .navbar-links{
+          a{
+            padding: 1.5rem 0;
+          }
+        }
+        .navbar-social{
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  @media (width: 320px){
+    .navbar-main-container{
+      .navbar-logo{
+        padding-top: 3.5rem;
+        padding-bottom: .5rem;
+        span{
+          display: none;
+        }
+      }
+      .navbar-body{
+        .navbar-links{
+          a{
+            padding: .6rem 0;
+          }
+        }
+        .navbar-social{
+          padding: 1rem;
+        }
       }
     }
   }
