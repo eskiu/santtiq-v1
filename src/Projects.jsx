@@ -21,7 +21,7 @@ import CssLogo from './assets/CssLogo'
 
 function Projects() {
 
-  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.1 })
+  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.04 })
   const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.1 })
   const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.1 })
   const { ref: ref4, inView: inView4 } = useInView({ threshold: 0.2 })
@@ -36,7 +36,6 @@ function Projects() {
         opacity: 1,
         scale: 1,
         transition: {
-          duration: 1,
           ease: [0, 0.71, 0.2, 1.01],
           duration: 0.8,
         }
@@ -56,7 +55,6 @@ function Projects() {
         opacity: 1,
         scale: 1,
         transition: {
-          duration: 1,
           ease: [0, 0.71, 0.2, 1.01],
           duration: 0.8,
         }
@@ -76,7 +74,6 @@ function Projects() {
         opacity: 1,
         scale: 1,
         transition: {
-          duration: 1,
           ease: [0, 0.71, 0.2, 1.01],
           duration: 0.8,
         }
@@ -96,7 +93,6 @@ function Projects() {
         opacity: 1,
         scale: 1,
         transition: {
-          duration: 1,
           ease: [0, 0.71, 0.2, 1.01],
           duration: 0.8,
         }
