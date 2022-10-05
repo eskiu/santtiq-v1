@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 import whohasmore1C from './assets/whohasmore1-c.jpg'
 import whohasmore2C from './assets/whohasmore2-c.jpg'
 import whohasmore3C from './assets/whohasmore3-c.jpg'
@@ -18,13 +20,109 @@ import Firebase from './assets/Firebase'
 import CssLogo from './assets/CssLogo'
 
 function Projects() {
+
+  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.1 })
+  const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.1 })
+  const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.1 })
+  const { ref: ref4, inView: inView4 } = useInView({ threshold: 0.2 })
+  const animation = useAnimation()
+  const animation2 = useAnimation()
+  const animation3 = useAnimation()
+  const animation4 = useAnimation()
+
+  useEffect(() => {
+    if (inView1) {
+      animation.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 1,
+          ease: [0, 0.71, 0.2, 1.01],
+          duration: 0.8,
+        }
+      })
+    }
+    if (!inView1) {
+      animation.start({
+        opacity: 0,
+        scale: 0,
+        transition: {
+          delay: 0.3,
+        }
+      })
+    }
+    if (inView2) {
+      animation2.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 1,
+          ease: [0, 0.71, 0.2, 1.01],
+          duration: 0.8,
+        }
+      })
+    }
+    if (!inView2) {
+      animation2.start({
+        opacity: 0,
+        scale: 0,
+        transition: {
+          delay: 0.3,
+        }
+      })
+    }
+    if (inView3) {
+      animation3.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 1,
+          ease: [0, 0.71, 0.2, 1.01],
+          duration: 0.8,
+        }
+      })
+    }
+    if (!inView3) {
+      animation3.start({
+        opacity: 0,
+        scale: 0,
+        transition: {
+          delay: 0.3,
+        }
+      })
+    }
+    if (inView4) {
+      animation4.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 1,
+          ease: [0, 0.71, 0.2, 1.01],
+          duration: 0.8,
+        }
+      })
+    }
+    if (!inView4) {
+      animation4.start({
+        opacity: 0,
+        scale: 0,
+        transition: {
+          delay: 0.3,
+        }
+      })
+    }
+
+  }, [inView1, inView2, inView3, inView4])
+
   return (
     <section className='projects__main__container' id='projects'>
       <div className="projects__main">
         <h2 className="projects__main__title">Proyectos.</h2>
-        <div className="project-container">
-          <article className='project' style={{ marginTop: "5rem" }}>
-            <div className="text">
+        <div className="project-container" ref={ref1}>
+          <article className='project mg-top' >
+            <motion.div
+              className="text"
+              animate={animation}>
               <h3>TEMPLE</h3>
               <div className='tech-icons'><ReactLogo /> <JavascriptLogo /> <CssLogo /> <HtmlLogo /></div>
               <p>
@@ -35,8 +133,10 @@ function Projects() {
                 Se consumió la API de Google para hacer uso de su mapa. El formulario de contacto fue validado con React Validator.
               </p>
               <a href="https://temple-ashen.vercel.app/" target={"_blank"}>temple-ashen.vercel.app <NewPage /></a>
-            </div>
-            <div className="imgs">
+            </motion.div>
+            <motion.div
+              className="imgs"
+              animate={animation}>
               <a href="https://temple-ashen.vercel.app/" target={"_blank"}>
                 <img src={temple1C} alt="who has more" />
               </a>
@@ -46,10 +146,13 @@ function Projects() {
               <a href="https://temple-ashen.vercel.app/" target={"_blank"}>
                 <img src={temple3C} alt="who has more" />
               </a>
-            </div>
+            </motion.div>
           </article>
-          <article className='project'>
-            <div className="text">
+
+          <article className='project' ref={ref2}>
+            <motion.div
+              className="text"
+              animate={animation2}>
               <h3>WHO HAS MORE?</h3>
               <div className='tech-icons'><ReactLogo /> <JavascriptLogo /> <SassLogo /> <HtmlLogo /></div>
               <p>
@@ -63,8 +166,10 @@ function Projects() {
                 Para el estilado utilicé <strong>SASS</strong>. También consumí la API de "Rest Countries" para traer la información y banderas de los distintos países.
               </p>
               <a href="https://whohasmore.vercel.app/" target={"_blank"}>whohasmore.vercel.app <NewPage /></a>
-            </div>
-            <div className="imgs">
+            </motion.div>
+            <motion.div
+              className="imgs"
+              animate={animation2}>
               <a href="https://whohasmore.vercel.app/" target={"_blank"}>
                 <img src={whohasmore1C} alt="who has more" />
               </a>
@@ -74,10 +179,14 @@ function Projects() {
               <a href="https://whohasmore.vercel.app/" target={"_blank"}>
                 <img src={whohasmore3C} alt="who has more" />
               </a>
-            </div>
+            </motion.div>
           </article>
-          <article className='project'>
-            <div className="text">
+
+          <article className='project' ref={ref3}>
+            <motion.div
+              className="text"
+              animate={animation3}
+            >
               <h3>SHIRTY</h3>
               <div className='tech-icons'><ReactLogo /> <JavascriptLogo /> <CssLogo /> <HtmlLogo /> <Firebase /></div>
               <p>
@@ -89,8 +198,11 @@ function Projects() {
                 Para validar el checkout usé React Validator y para almacenar la información del mismo empleé <strong>Firebase</strong>.
               </p>
               <a href="https://shirty.vercel.app/" target={"_blank"}>shirty.vercel.app <NewPage /></a>
-            </div>
-            <div className="imgs">
+            </motion.div>
+            <motion.div
+              className="imgs"
+              animate={animation3}
+            >
               <a href="https://shirty.vercel.app/" target={"_blank"}>
                 <img src={shirty2C} alt="who has more" />
               </a>
@@ -100,15 +212,22 @@ function Projects() {
               <a href="https://shirty.vercel.app/" target={"_blank"}>
                 <img src={shirty1C} alt="who has more" />
               </a>
-            </div>
+            </motion.div>
           </article>
-          <article className="project-small mg-left">
-            <div className="img">
+
+          <article className="project-small mg-left" ref={ref4}>
+            <motion.div
+              className="img"
+              animate={animation4}
+            >
               <a href="https://flagger-ten.vercel.app/" target={"_blank"}>
                 <img src={flagger} alt="flagger" />
               </a>
-            </div>
-            <div className="text">
+            </motion.div>
+            <motion.div
+              className="text"
+              animate={animation4}
+            >
               <h3>FLAGGER</h3>
               <div className='tech-icons'><ReactLogo /> <JavascriptLogo /> <CssLogo /> <HtmlLogo /></div>
               <p>
@@ -119,7 +238,7 @@ function Projects() {
                 Para el estilado usé <strong>CSS</strong>. Por otro lado, la API que se consumió para extraer la información fue la de "Rest Countries".
               </p>
               <a href="https://flagger-ten.vercel.app/" target={"_blank"}>flagger-ten.vercel.app <NewPage /></a>
-            </div>
+            </motion.div>
           </article>
         </div>
       </div>

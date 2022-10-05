@@ -93,6 +93,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: var(--background-elmnt);
+    z-index: 99;
     filter: drop-shadow(0px 0px 1px var(--color-shadow)); 
     .navbar-logo{
       display: flex;
@@ -105,6 +106,10 @@ body {
         color: var(--small-text-color);
         font-size: .8em;
         line-height: 1rem;
+      }
+      svg{
+        width: 100px;
+        height: 100px;
       }
       img{
         width: 100px;
@@ -285,10 +290,12 @@ body {
       }
 
       .arrow-down {
-          display: block;
-          margin: 0 auto;
-          width: 10px;
+          display: flex;
+          margin: 0;
+          width: 100%;
           height: 20px;
+          align-items: center;
+          justify-content: center;
       }
       .arrow-down:after {
           content: '';
@@ -313,7 +320,7 @@ body {
         font-family: Helvetica Neue, Helvetica, Arial;
         font-size:14px;
         font-weight:bold;
-        letter-spacing:.1em;
+        letter-spacing:.05em;
       }
       .scroll-down::before {
           -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
@@ -331,9 +338,9 @@ body {
           position: absolute;
           top: 0px;
           left: 50%;
-          margin-left: -2px;
+          margin-left: -1px;
           width: 2px;
-          height: 62px;
+          height: 68px;
           background: var(--violet);
           content: ' ';
       }
@@ -871,7 +878,13 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-
+        .errorMessage{
+          color: rgb(240, 62, 62);
+          font-size: .8rem;
+          margin-bottom: 1rem;
+          position: absolute;
+          padding: 10px 0;
+        }
         .contact__main__info__form{
           margin-top: 37px;
           .contact__main__info__form__email, .contact__main__info__form__name{
@@ -893,7 +906,7 @@ body {
             position: relative;
             width: 100%;
             border-bottom: 2px solid #adadad;
-            margin-bottom: 37px;
+            margin-bottom: 50px;
             input{
               border: none;
               outline: none;
@@ -962,6 +975,7 @@ body {
             }
             .input:focus + .focus-input::after{
               top: -13px;
+              color: var(--violet);
             }
             .input:focus + .focus-input::before{
               width: 100%;
@@ -1045,6 +1059,7 @@ body {
           }
           .input:focus + .focus-input::after{
             top: -13px;
+            color: var(--violet);
           }
           .input:focus + .focus-input::before{
             width: 100%;
@@ -1089,6 +1104,11 @@ body {
           background: var(--violet);
           color: #ffffff;
         }
+        .btn-contact:disabled{
+          border: 4px double darkgray;
+          background-color: gray;
+          cursor: not-allowed;
+        }
       }
     }
     .other-contact{
@@ -1124,7 +1144,6 @@ body {
     .DarkToggle{
       z-index: 99;
       .darkMode-toggle{
-        padding-left: 1rem;
         svg{
           display: flex;
         }
@@ -1158,6 +1177,9 @@ body {
   }
   .mg-left{
     margin-left: 5rem;
+  }
+  .mg-top{
+    margin-top: 5rem;
   }
   .mg-right{
     margin-right: 1rem;
@@ -1207,6 +1229,11 @@ body {
         display: flex;
         flex-direction: column;
         z-index: 99;
+      }
+      .DarkToggle{
+        .darkMode-toggle{
+          padding-left: 1rem;
+        }
       }
     }
     .toggles:before{
@@ -1681,6 +1708,15 @@ body {
       }
     }
     .contact__main__container{
+      .contact__main{
+        .contact__main__info{
+          .contact__main__info__form{
+            .wrap-input{
+              margin-bottom: 65px;
+            }
+          }
+        }
+      }
       .other-contact{
         margin-top: 0;
         padding-top: 2.5rem;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import GitHubLogoSVG from './assets/GhLogo'
 import LinkedinLogo from './assets/LinkedinLogo'
+import LogoSVG from './assets/LogoSVG'
 import DarkMode from './DarkMode'
 
 function Navbar() {
@@ -23,7 +24,7 @@ function Navbar() {
       <menu className={active}>
         <div className="navbar-logo">
           <a href="#home" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")}>
-            <img src="../Logo blanco 2022 - copia3.png" alt="logo-santi-q" />
+            <LogoSVG />
           </a>
           <span>Santiago</span>
           <span>Quinteros</span>

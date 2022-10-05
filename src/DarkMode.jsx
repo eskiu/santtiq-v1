@@ -5,7 +5,7 @@ import Sun from './assets/Sun'
 
 function DarkMode() {
 
-    const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") === "dark" ? true : false);
+    const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") === null ? true : localStorage.getItem("theme") === "dark" ? true : false);
 
     const body = document.body;
     const lightTheme = "light";
