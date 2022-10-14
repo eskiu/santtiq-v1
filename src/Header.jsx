@@ -1,12 +1,28 @@
 import React from 'react'
 import CV from './assets/CV.pdf'
 import Newpage from './assets/NewPage'
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 
 function Header() {
 
+    const { ref: ref, inView: inView } = useInView({ threshold: 1 });
+    let homeHash = document.querySelector('#home-nav');
+    let projectsHash = document.querySelector('#projects-nav');
+    let aboutHash = document.querySelector('#about-nav')
+    let contactHash = document.querySelector('#contact-nav');
+
+    useEffect(() => {
+        if (inView) {
+            homeHash.classList.add('violet')
+            projectsHash?.classList?.remove('violet');
+            aboutHash?.classList?.remove('violet');
+            contactHash?.classList?.remove('violet');
+        }
+    }, [inView])
 
     return (
-        <header className="header__main__container" id='home'>
+        <header className="header__main__container" id='home' ref={ref}>
             <div className="header__container">
                 <div className="header__container__text">
                     <h1 className="header__container__text__title">Hola,</h1>

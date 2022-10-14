@@ -31,10 +31,10 @@ function Navbar() {
         </div>
         <div className="navbar-body">
           <div className="navbar-links">
-            <a href="#home" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")}>Home</a>
-            <a href="#projects" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")}>Proyectos</a>
-            <a href="#about" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")}>Sobre mi</a>
-            <a style={{ color: "#8C5AF4" }} href="#contact" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")}>Contacto</a>
+            <a href="#home" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")} style={{ color: "#909096" }} id="home-nav">Home</a>
+            <a href="#about" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")} style={{ color: "#909096" }} id="about-nav">Sobre mi</a>
+            <a href="#projects" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")} style={{ color: "#909096" }} id="projects-nav">Proyectos</a>
+            <a href="#contact" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")} style={{ color: "#909096" }} id="contact-nav">Contacto</a>
           </div>
           <div className="navbar-social">
             <a href="https://www.linkedin.com/in/santiquinteros/" target={"_blank"}><LinkedinLogo fill="#909096" onClick={() => setActive("navbar-main-container") & setToggleIcon("nav-toggler")} /></a>

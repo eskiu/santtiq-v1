@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import LinkedinXL from './assets/LinkedinXL'
+import GithubXL from './assets/GithubXL';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useInView } from 'react-intersection-observer'
+
 
 function Contact() {
 
@@ -11,6 +14,22 @@ function Contact() {
     const [formErrors, setFormErrors] = useState({});
     const [sending, setSending] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const { ref: ref, inView: inView } = useInView({ threshold: 0.05 });
+
+    let homeHash = document.querySelector('#home-nav');
+    let projectsHash = document.querySelector('#projects-nav');
+    let aboutHash = document.querySelector('#about-nav');
+    let contactHash = document.querySelector('#contact-nav');
+
+
+    useEffect(() => {
+        if (inView) {
+            contactHash?.classList?.add('violet');
+            aboutHash?.classList?.remove('violet');
+            projectsHash?.classList?.remove('violet');
+            homeHash?.classList?.remove('violet');
+        }
+    }, [inView])
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -78,7 +97,7 @@ function Contact() {
 
     return (
         <>
-            <div className="contact__main__container" id='contact'>
+            <div className="contact__main__container" id='contact' ref={ref}>
                 <div className="contact__main">
                     <h2 className="contact__main__title">Contacto.</h2>
                     <div className="contact__main__info">
@@ -110,6 +129,9 @@ function Contact() {
                     <h2>También podes contactarme vía: </h2>
                     <a href="https://www.linkedin.com/in/santiquinteros/" target={"_blank"}>
                         <LinkedinXL />
+                    </a>
+                    <a href="https://github.com/santtiq/" target={"_blank"}>
+                        <GithubXL />
                     </a>
                 </div>
             </div>
