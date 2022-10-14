@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import portrait from './assets/IMG_2521.jpg';
 import CV from './assets/CV.pdf';
 import Newpage from './assets/NewPage';
-import Mailto3 from './assets/mailto3';
+import Mailto3 from './assets/Mailto3';
 import { useInView } from 'react-intersection-observer';
 import ReactLogo from './assets/ReactLogo'
 import SassLogo from './assets/SassLogo'
