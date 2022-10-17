@@ -236,13 +236,13 @@ function Projects() {
               animate={animation3}
             >
               <a href="https://shirty.vercel.app/" target={"_blank"}>
+                <img src={shirty1C} alt="who has more" />
+              </a>
+              <a href="https://shirty.vercel.app/" target={"_blank"}>
                 <img src={shirty2C} alt="who has more" />
               </a>
               <a href="https://shirty.vercel.app/" target={"_blank"}>
                 <img src={shirty3C} alt="who has more" />
-              </a>
-              <a href="https://shirty.vercel.app/" target={"_blank"}>
-                <img src={shirty1C} alt="who has more" />
               </a>
             </motion.div>
           </article>
