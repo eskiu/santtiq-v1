@@ -52,7 +52,6 @@ function About() {
                 </div>
                 <div className="buttons-header">
                     <a href="mailto:santiquinteros.j@gmail.com" rel='contact' className='link-mail'>SANTIQUINTEROS.J@GMAIL.COM <Mailto3 /></a>
-                    <a href={CV} rel='contact' className='btn-contact' target={"_blank"}>DESCARGAR CV &nbsp;<Newpage /></a>
                 </div>
             </div>
             <div className="about__profile-img">

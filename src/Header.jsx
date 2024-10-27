@@ -32,7 +32,6 @@ function Header() {
                     <h1 className='tittle-small'>Developer</h1>
                     <div className="buttons-header">
                         <a href="#contact" rel='contact' className='btn-contact mg-right btn-contact-text'>CONTACTAME</a>
-                        <a href={CV} rel='contact' className='btn-contact' target={"_blank"}>DESCARGAR CV &nbsp;<Newpage /></a>
                     </div>
                 </div>
             </div>

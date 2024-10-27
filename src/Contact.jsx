@@ -125,15 +125,6 @@ function Contact() {
                         </form>
                     </div>
                 </div>
-                <div className="other-contact">
-                    <h2>También podes contactarme vía: </h2>
-                    <a href="https://www.linkedin.com/in/santiquinteros/" target={"_blank"}>
-                        <LinkedinXL />
-                    </a>
-                    <a href="https://github.com/santtiq/" target={"_blank"}>
-                        <GithubXL />
-                    </a>
-                </div>
             </div>
             <ToastContainer />
         </>
